@@ -19,7 +19,7 @@ easy_install django-pressroom
 The current development version of Pressroom can be checked out via Subversion from the project site using the following command:
 
 ```bash
-git clone https://github.com/mthornhill/django-pressroom.git
+git clone https://github.com/lDuffy/django-pressroom.git
 ```
 
 If you wish to contribute to pressroom, here is how to set up your development environment
@@ -30,8 +30,7 @@ virtualenv . --no-site-packages
 source bin/activate
 python bootstrap.py
 bin/buildout -v
-bin/django syncdb
-bin/django runscript load_data -v2
+./setupdatabase.sh
 bin/django runserver
 ```
 browse to `http://localhost:8000/`
