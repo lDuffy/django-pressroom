@@ -30,7 +30,7 @@
     <h2>Archive {{ year }}</h2>
     <ul class="article-archive">
         {% for date in date_list %}
-            <li><a href="{% url pr-article-archive-year date.year %}">{{ date|date:"Y" }}</a></li>
+            <li><a href="{% url 'pr-article-archive-year date.year' %}">{{ date|date:"Y" }}</a></li>
         {% endfor %}
     </ul>
     {% endif %}

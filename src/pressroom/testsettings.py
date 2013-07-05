@@ -30,3 +30,9 @@ ROOT_URLCONF = 'pressroom.tests.urls'
 
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
+        'PATH': os.path.join(os.path.dirname(__file__), 'whoosh_index'),
+    },
+}
